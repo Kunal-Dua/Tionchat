@@ -1,12 +1,14 @@
-import logo from './logo.svg';
 import './App.css';
+import Header from './Components/Header';
+import Sidebar from './Components/Sidebar';
 
 function App() {
-  return (
-    <>
-    
-    </>
-  );
+	return (
+		<>
+			<Header />
+      <Sidebar/>
+		</>
+	);
 }
 
 export default App;
