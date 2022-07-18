@@ -20,7 +20,8 @@
 }
 
 .sidebarOption_hash {
-  padding: 10px 0px;
+  padding: 8px 0px;
+  margin-left: 1vw;
 }
 .sidebarOption > h3 {
   font-weight: 500;
