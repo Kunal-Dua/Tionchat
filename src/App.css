@@ -1,3 +1,8 @@
-body{
-    --slack-color:#4a154b;
+body {
+  --slack-color: #4a154b;
+}
+
+.app__body {
+  height: 100vh;
+  display: flex;
 }

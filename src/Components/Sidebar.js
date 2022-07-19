@@ -12,6 +12,7 @@ import AppsIcon from '@mui/icons-material/Apps';
 import ContentCopyIcon from '@mui/icons-material/ContentCopy';
 import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import AddIcon from '@mui/icons-material/Add';
 import { db } from '../firebase';
 
 const Sidebar = () => {
@@ -49,7 +50,7 @@ const Sidebar = () => {
       <SidebarOption Icon={ContentCopyIcon} title={'File Brower'} />
       <SidebarOption Icon={ExpandLessIcon} title={'Show less'} />
       <hr />
-      <SidebarOption title={'Channels'} />
+      <SidebarOption Icon ={AddIcon}title={'Channels'} addChannelOption />
       <hr />
 
       {channels.map((channel) => (
