@@ -26,3 +26,8 @@
 .sidebarOption > h3 {
   font-weight: 500;
 }
+
+.sidebarOption_channel {
+  font-size: 14px;
+  font-weight: 500;
+}

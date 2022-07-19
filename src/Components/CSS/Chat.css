@@ -1,17 +1,17 @@
 .chat {
   flex: 0.7;
-  flex-grow: 1;
   overflow-y: scroll;
   padding-bottom: 150px;
+  flex-grow: 1;
 }
 
 .chat__header {
-  /* width: 70vw; */
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 20px;
   border-bottom: 1px grey solid;
+  width:70vw;
 }
 .chat__headerLeft {
   display: flex;
@@ -32,6 +32,7 @@
 }
 .chat__channelName {
   text-transform: lowercase;
+  margin-right: 1vw;
 }
 .chat__channelName > .MuiSvgIcon-root {
   margin-left: 10px;
