@@ -13,10 +13,12 @@ import ContentCopyIcon from '@mui/icons-material/ContentCopy';
 import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import AddIcon from '@mui/icons-material/Add';
+import { useStateValue } from '../State Provider/StateProvider';
 import { db } from '../firebase';
 
 const Sidebar = () => {
   const [channels, setChannels] = useState([]);
+  const [{ user }, dispatch] = useStateValue();
 
   useEffect(() => {
     db.collection('rooms').onSnapshot((snapshot) => {
@@ -36,7 +38,7 @@ const Sidebar = () => {
           <h2>Tionchat</h2>
           <h3>
             <FiberManualRecordRoundedIcon />
-            Kunal Dua
+            {user?.displayName}
           </h3>
         </div>
         <CreateIcon />
@@ -50,7 +52,7 @@ const Sidebar = () => {
       <SidebarOption Icon={ContentCopyIcon} title={'File Brower'} />
       <SidebarOption Icon={ExpandLessIcon} title={'Show less'} />
       <hr />
-      <SidebarOption Icon ={AddIcon}title={'Channels'} addChannelOption />
+      <SidebarOption Icon={AddIcon} title={'Channels'} addChannelOption />
       <hr />
 
       {channels.map((channel) => (
